@@ -1,0 +1,61 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #0a0c10;
+  --surface:  #111318;
+  --border:   #1e2230;
+  --border2:  #2a3040;
+  --text:     #e8ecf4;
+  --muted:    #6b7591;
+  --accent:   #4f8ef7;
+  --accent2:  #7b5ea7;
+  --success:  #3ecf8e;
+  --warning:  #f0a030;
+  --danger:   #e05260;
+  --font:     'Space Grotesk', sans-serif;
+  --mono:     'Space Mono', monospace;
+  --r:        8px;
+  --r2:       12px;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input, select {
+  font-family: var(--mono);
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  border-radius: var(--r);
+  padding: 8px 12px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+input:focus, select:focus {
+  border-color: var(--accent);
+}
+
+.leaflet-container {
+  background: #0d1117 !important;
+  font-family: var(--font) !important;
+}

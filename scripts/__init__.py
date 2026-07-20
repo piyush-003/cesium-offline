@@ -1,0 +1,1 @@
+# CesiumOffline scripts package
